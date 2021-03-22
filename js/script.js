@@ -38,7 +38,10 @@ for (var i = 0; i < accounts.length; i++){
 
 if (userFound === true){
     console.log('Utente trovato, accedi');
-    document.getElementById('check').innerHTML = ('Benvenuto'+ userName);
+    document.getElementById('check').innerHTML = ('Benvenuto '+ userName);
+    document.getElementById('check').style.color = '#f8c100';
+
+
 } else {
     console.log('Errore di autenticazione');
     document.getElementById('check').innerHTML = ('Spiacente, indirizzo email errato');
@@ -92,10 +95,10 @@ function myFunction(){
         message = 'Pareggio, ritenta';
 
     }
+
     // Fase 4 Stampa vincitore in base al numero maggiore
 
     document.getElementById('winner').innerHTML = message;
-
 
 
 
