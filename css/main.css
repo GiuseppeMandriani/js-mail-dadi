@@ -10,3 +10,17 @@ body{
     font-family: sans-serif;
 }
 
+/* UTILITIES */
+
+.btn-start{
+    min-width:100px;
+    padding: 5px;
+    color: #fff;
+    background-color: #1f3b81;
+    border: 1px solid #2e2504;
+    border-radius:10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+

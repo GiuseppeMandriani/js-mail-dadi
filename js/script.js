@@ -45,3 +45,58 @@ if (userFound === true){
     alert('Reinserire indirizzo email');
 
 }
+
+// Esercizio 2 Gioco dei Dadi
+
+/**
+ * Fase 1 Generare Numero Random per Giocatore e Computer
+ * 
+ * Fase 2 Stampare numerico
+ * 
+ * Fase 3 Stampare vincitore
+ * 
+ */
+
+
+
+function myFunction(){
+
+    var message;
+
+    // Fase 1 Numero Random da 1 a 6 per Giocatore
+    var numero = Math.random();
+    var numeroGiocatore = Math.floor(Math.random() * 6 + 1);
+    console.log('Numero Giocatore è: ' + numeroGiocatore);
+    message = 'il numero del player è ' + numeroGiocatore;
+    document.getElementById('player').innerHTML = message;
+
+
+    // Fase 2 numero Random da 1 a 6 per Computer
+    var numeroBot = Math.floor(Math.random() * 6 + 1);
+    console.log('Numero Bot è: ' + numeroBot);
+    message = 'il numero del Bot è ' + numeroBot;
+    document.getElementById('bot').innerHTML = message;
+
+    // Fase 3 Scelta vincitore in base al numero maggiore
+
+    if(numeroGiocatore < numeroBot){
+        console.log('Spiacente, hai perso, ritenta sarai più fortunato')
+        message = 'Spiacente hai perso, ritenta sarai più fortunato.';
+
+    } else if (numeroGiocatore > numeroBot) {
+        console.log('Hai vinto!!!');
+        message = 'Hai vinto!!!!!';
+
+    } else {
+        console.log('Pareggio, ritenta')
+        message = 'Pareggio, ritenta';
+
+    }
+    // Fase 4 Stampa vincitore in base al numero maggiore
+
+    document.getElementById('winner').innerHTML = message;
+
+
+
+
+}
