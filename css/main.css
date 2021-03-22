@@ -26,6 +26,13 @@ body{
 
 }
 
+.btn-start.email{
+    color: #fff;
+    background-color: #8ca5e6;
+    margin-top: 20px;
+
+}
+
 h1{
     color: #760105;
     margin-top:15px;
@@ -60,14 +67,13 @@ h3{
     background-color: rgba(0, 0, 0, .3);
 }
 
-#winner{
-    animation: spin linear 2s 2;
-    
-}
 
-@keyframes spin {
-    0%{
-        transform: rotate(1turn);
-    }
+#controllo{
+    min-width:200px;
+    margin-top: 20px;
+    color: #fff;
+    background-color:transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
 }
 

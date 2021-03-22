@@ -17,36 +17,42 @@ var accounts = ['giuseppe.mandriani@gmail.com', 'serafina90@live.it', 'beppe2008
 console.log(accounts);
 console.table(accounts); //Sotto forma di table in console
 
+
 // Fase 2 Richiesta email al'utente
 
-var userName = prompt('Inserire indirizzo email').toLowerCase(); //Metodo 1 trasformo direttamente tutto in minuscolo
+// var userName = prompt('Inserire indirizzo email').toLowerCase(); //Metodo 1 trasformo direttamente tutto in minuscolo
 // userName = userName.toLowerCase();   // Metodo 2 Sovrascirvo variabile e Trasformo tutto in minuscolo
-console.log('User inserito dall\'utente: ' + userName);
+// console.log('User inserito dall\'utente: ' + userName);
 
-// Fase 3/4 Verifica e Stampa
 
-var userFound = false; //Imposto condizione
+// Fase 2/3/4 Verifica e Stampa
 
-for (var i = 0; i < accounts.length; i++){
-    console.log(accounts[i]);
+function checkEmail() {
+    var userName = document.getElementById('controllo').value;
+    var userFound = false; //Imposto condizione
 
-    if(accounts[i] === userName) {
-        userFound = true;
-        break;
+    for (var i = 0; i < accounts.length; i++){
+        console.log(accounts[i]);
+    
+        if(accounts[i] === userName) {
+            userFound = true;
+            break;
+        }
     }
-}
-
-if (userFound === true){
-    console.log('Utente trovato, accedi');
-    document.getElementById('check').innerHTML = ('Benvenuto '+ userName);
-    document.getElementById('check').style.color = '#f8c100';
-
-
-} else {
-    console.log('Errore di autenticazione');
-    document.getElementById('check').innerHTML = ('Spiacente, indirizzo email errato');
-    alert('Reinserire indirizzo email');
-
+    
+    if (userFound === true){
+        console.log('Utente trovato, accedi');
+        document.getElementById('check').innerHTML = ('Benvenuto '+ userName);
+        document.getElementById('check').style.color = '#f8c100';
+        document.getElementById('text').innerHTML = ('Welcome');
+    
+    
+    } else {
+        console.log('Errore di autenticazione');
+        document.getElementById('check').innerHTML = ('Spiacente, indirizzo email errato');
+        alert('Reinserire indirizzo email');
+    
+    }
 }
 
 // Esercizio 2 Gioco dei Dadi
@@ -62,7 +68,7 @@ if (userFound === true){
 
 
 
-function myFunction(){
+function gameDice(){
 
     var message;
 
@@ -99,7 +105,5 @@ function myFunction(){
     // Fase 4 Stampa vincitore in base al numero maggiore
 
     document.getElementById('winner').innerHTML = message;
-
-
 
 }
